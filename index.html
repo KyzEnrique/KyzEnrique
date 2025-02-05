@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💖 Invitación de San Valentín 💖</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #ffe6e6;
+        margin: 50px;
+      }
+      .container {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 1.5s;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .yes {
+        background-color: red;
+        color: white;
+      }
+      .no {
+        background-color: gray;
+        color: white;
+      }
+      .hidden {
+        display: none;
+      }
+      img {
+        width: 150px;
+        height: auto;
+        margin-top: 15px;
+      }
+      .message {
+        font-size: 20px;
+        font-weight: bold;
+        color: #ff4d4d;
+        display: none;
+        animation: fadeIn 1s;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        background: #ffcccc;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      li:hover {
+        background: #ff9999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Mi amorcito hermosa, ¿quieres ser mi San Valentín? 💘</h1>
+      <img
+        src="https://e7.pngegg.com/pngimages/57/471/png-clipart-snoopy-charlie-brown-peanuts-cartoon-valentines-day.png"
+        id="snoopy"
+        alt="Snoopy celebrando"
+      />
+      <!-- 🔹 Coloca aquí el enlace de Snoopy -->
+      <br />
+      <button class="yes" onclick="aceptar()">💖 Sí 💖</button>
+      <button class="no" onclick="rechazar()">💔 No 💔</button>
+      <div id="mensaje" class="message"></div>
+      <img
+        src="https://th.bing.com/th/id/R.0322cd7e48dfdb93ee7d088d415cd47f?rik=5SHZBAQtp60LUQ&pid=ImgRaw&r=0"
+        id="cat"
+        class="hidden"
+        alt="Gatito enojado"
+      />
+      <!-- 🔹 Enlace del gatito enojado -->
+      <div id="opciones" class="hidden">
+        <h2>Elige nuestra cita romántica:</h2>
+        <ul>
+          <li onclick="confirmarCita('📽️ Día de películas con salchipapita')">
+            📽️ Día de películas con salchipapita
+          </li>
+          <li onclick="confirmarCita('🏖️ Picnic en la playa')">
+            🏖️ Picnic en la playa
+          </li>
+          <li
+            onclick="confirmarCita('🍽️ Cena romántica en un restaurante bonito')"
+          >
+            🍽️ Cena romántica en un restaurante bonito
+          </li>
+          <li
+            onclick="confirmarCita('🎡 Visita a la feria o parque de diversiones')"
+          >
+            🎡 Visita a la feria o parque de diversiones
+          </li>
+          <li onclick="confirmarCita('☕ Café y postres en un lugar acogedor')">
+            ☕ Café y postres en un lugar acogedor
+          </li>
+        </ul>
+      </div>
+      <img
+        src="https://th.bing.com/th/id/OIP.P9dQyq0NfPYxRVLIxU7UeQHaEK?rs=1&pid=ImgDetMain"
+        id="goku"
+        class="hidden"
+        alt="Goku feliz"
+      />
+      <!-- 🔹 Enlace de Goku -->
+      <img
+        src="https://i.pinimg.com/736x/c6/eb/38/c6eb3829f4eb853debfd6d52c49cd6a7.jpg"
+        id="gojo"
+        class="hidden"
+        alt="Gojo sonriendo"
+      />
+      <!-- 🔹 Enlace de Gojo -->
+    </div>
+    <script>
+      function aceptar() {
+        document.getElementById("mensaje").innerHTML =
+          "😍 ¡Mi amorcito Preciosa! Me haces el más feliz del mundo 💕"
+        document.getElementById("mensaje").style.display = "block"
+        document.getElementById("opciones").classList.remove("hidden")
+        document.getElementById("goku").classList.remove("hidden")
+        document.getElementById("gojo").classList.remove("hidden")
+      }
+      function rechazar() {
+        document.getElementById("mensaje").innerHTML = "¡¿Cómo que no?! 😡"
+        document.getElementById("mensaje").style.display = "block"
+        document.getElementById("cat").classList.remove("hidden")
+      }
+      function confirmarCita(cita) {
+        document.getElementById("mensaje").innerHTML =
+          "¡Qué emoción! Nuestra cita será: " + cita + " 💑"
+        document.getElementById("mensaje").style.display = "block"
+      }
+    </script>
+  </body>
+</html>
