@@ -1,3 +1,9 @@
+<h1>Operating Systems</h1>
+
+<img src="https://skillicons.dev/icons?i=windows,arch,linux,mint,ubuntu"/>
+
+
+
 <h2>🛠️ | Languages, Frameworks, and Tools </h2>
 <table>
     <tr>
